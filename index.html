@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melvin Emmanuel Theodore | Automotive Design & CAE Engineer</title>
+    <meta name="description" content="Portfolio of Melvin Emmanuel Theodore, Automotive Design Engineer, CAD Designer, and CAE Engineer. Specializing in Class-A surfacing, CFD, and crash simulation.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 3D Canvas Background Container -->
+    <div id="canvas-container"></div>
+
+    <!-- Mouse Follow Glow -->
+    <div id="mouse-glow"></div>
+
+    <!-- Background Glows -->
+    <div class="bg-glow"></div>
+    <div class="bg-glow-accent"></div>
+
+    <!-- Dashboard Preloader -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="loader-percentage" id="loader-perc">00</div>
+            <div class="loader-text">SYS.INIT // CORE_BOOT</div>
+            <div class="loader-bar">
+                <div class="loader-progress" id="loader-prog"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll-bound Path Indicator (Apple / CodePen style) -->
+    <div class="scroll-path-container">
+        <div class="scroll-line"></div>
+        <div class="scroll-progress-line" id="scroll-prog-line"></div>
+        <!-- High-tech Car Icon -->
+        <svg class="scrolling-car-icon" id="scroll-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-1.1 0-2 .9-2 2v4c0 .6.4 1 1 1h2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="7" cy="17" r="2" fill="currentColor"/>
+            <circle cx="17" cy="17" r="2" fill="currentColor"/>
+            <path d="M13 10V7" stroke-linecap="round"/>
+            <path d="M9 10V7" stroke-linecap="round"/>
+        </svg>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass">
+        <a href="#" class="logo">Melvin Emmanuel Theodore <span class="logo-accent">//</span></a>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tagline">AUTOMOTIVE DESIGN & CAE</span>
+            <h1 class="hero-title">Designing the <span>Future</span> of Automotive Engineering</h1>
+            <p class="hero-desc">I am a Project Manager and Automotive Subject Matter Expert with experience delivering 100+ automotive projects and providing technical expertise. Alongside my professional role, I am passionate about automotive design, reverse engineering, CAD modeling, and continuously expanding my skills in CFD simulation to bridge engineering, analysis, and product development.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Portfolio</a>
+                <a href="#contact" class="btn btn-secondary">Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Career & Education) -->
+    <section id="about">
+        <div class="section-header">
+            <span class="section-subtitle">01 // EXPERIENCE</span>
+            <h2 class="section-title">Career & Education</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-left">
+                <div class="about-text">
+                    <h3>Professional Profile</h3>
+                    <p>I am a Project Manager and Automotive Subject Matter Expert with over 5 years of experience delivering 100+ automotive projects and providing technical expertise. I specialize in bridging the gap between design engineering, physical analysis, and product development.</p>
+                    <p>My work combines advanced CAD modeling, reverse engineering, and CFD simulation. I lead multidisciplinary engineering teams, coordinate complex client requirements, and ensure the highest standards of design validation and mechanical integrity.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-box glass glass-hover">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-box glass glass-hover">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Projects Delivered</div>
+                    </div>
+                    <div class="stat-box glass glass-hover">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Engineering Degrees</div>
+                    </div>
+                    <div class="stat-box glass glass-hover">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Precision Oriented</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-right">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-date">Oct 2021 - Present</span>
+                        <h3 class="timeline-title">Automotive Project Manager & SME</h3>
+                        <span class="timeline-company" style="color: var(--primary); font-size: 13px; display: block; margin-bottom: 8px;">TCP International // Tamil Nadu, India</span>
+                        <p class="timeline-desc">Leading a 30-member engineering team. Managed 100+ projects and animation production for major clients (FCP Euro, Advance Auto Parts). Performing design validations, applying GD&T, and analyzing mechanical system flows (powertrain, suspension, braking).</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">Feb 2021 - Oct 2021</span>
+                        <h3 class="timeline-title">Floor Manager & Automotive Mechanic</h3>
+                        <span class="timeline-company" style="color: var(--primary); font-size: 13px; display: block; margin-bottom: 8px;">Shanthi Auto Care // Tamil Nadu, India</span>
+                        <p class="timeline-desc">Modelled mechanical parts in SolidWorks for workshop upgrades. Diagnosed and repaired engines, transmissions, and electrical systems. Improved documentation efficiency by 90% and reduced parts costs by 60%.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2019 - 2020</span>
+                        <h3 class="timeline-title">MSc in Automotive Engineering</h3>
+                        <span class="timeline-company" style="color: var(--primary); font-size: 13px; display: block; margin-bottom: 8px;">University of Leeds // United Kingdom</span>
+                        <p class="timeline-desc">Specialized in vehicle aerodynamics, crashworthiness, engine design, and chassis dynamics. Thesis centered on aerodynamic drag reduction of heavy vehicles.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-date">2015 - 2019</span>
+                        <h3 class="timeline-title">BE in Mechanical Engineering</h3>
+                        <span class="timeline-company" style="color: var(--primary); font-size: 13px; display: block; margin-bottom: 8px;">CSI College of Engineering // Tamil Nadu, India</span>
+                        <p class="timeline-desc">Acquired core foundation in engineering principles, thermodynamic analysis, fluid mechanics, and CAD/CAE fundamentals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="glass" style="margin: 0 10%; border-radius: 24px; padding: 80px 80px;">
+        <div class="section-header">
+            <span class="section-subtitle">02 // CAPABILITIES</span>
+            <h2 class="section-title">Skills Matrix</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skills-category">
+                <h3>CAD <span>Computer Aided Design</span></h3>
+                <div class="skill-list">
+                    <span class="skill-tag">CATIA V5</span>
+                    <span class="skill-tag">SolidWorks</span>
+                    <span class="skill-tag">AutoCAD</span>
+                    <span class="skill-tag">Surface Modeling</span>
+                    <span class="skill-tag">Reverse Engineering</span>
+                    <span class="skill-tag">GD&T</span>
+                    <span class="skill-tag">Engineering Drawings</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>CAE <span>Computer Aided Engineering</span></h3>
+                <div class="skill-list">
+                    <span class="skill-tag">ANSYS Fluent</span>
+                    <span class="skill-tag">ANSYS Mechanical</span>
+                    <span class="skill-tag">CFD Analysis</span>
+                    <span class="skill-tag">Crash Simulation</span>
+                    <span class="skill-tag">Finite Element Analysis</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Visualization & Design <span>Rendering & D&D</span></h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Photoshop</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Skills in Development <span>Active Learning</span></h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Class-A Surfacing</span>
+                    <span class="skill-tag">Automotive Packaging</span>
+                    <span class="skill-tag">Explicit Dynamics</span>
+                    <span class="skill-tag">MATLAB & Simulink</span>
+                    <span class="skill-tag">Electronics & PCB Design (KiCad)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects / Portfolio Section -->
+    <section id="projects">
+        <div class="section-header">
+            <span class="section-subtitle">03 // ENGINEERING PORTFOLIO</span>
+            <h2 class="section-title">Design & Engineering</h2>
+        </div>
+
+        <div class="portfolio-accordion">
+
+            <!-- Accordion Section 1: Featured Case Studies -->
+            <div class="portfolio-section expanded" id="sec-case-studies">
+                <div class="portfolio-section-header">
+                    <div class="portfolio-header-text">
+                        <span class="section-number">01 //</span>
+                        <h3 class="portfolio-section-title">Featured Case Studies</h3>
+                    </div>
+                    <div class="car-toggle-container" title="Click to toggle section">
+                        <!-- Custom SVG top-down view car with animated scissor doors -->
+                        <svg class="car-toggle-icon" viewBox="0 0 100 60" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <!-- Wheels -->
+                            <rect x="20" y="6" width="12" height="6" rx="2" fill="#555" stroke="none" />
+                            <rect x="68" y="6" width="12" height="6" rx="2" fill="#555" stroke="none" />
+                            <rect x="20" y="48" width="12" height="6" rx="2" fill="#555" stroke="none" />
+                            <rect x="68" y="48" width="12" height="6" rx="2" fill="#555" stroke="none" />
+                            <!-- Main Body Shadow -->
+                            <path d="M 12 30 C 12 24, 18 14, 28 14 L 72 14 C 82 14, 88 20, 88 30 C 88 40, 82 46, 72 46 L 28 46 C 18 46, 12 36, 12 30 Z" fill="rgba(0,0,0,0.4)" stroke="none" transform="translate(0, 3)" />
+                            <!-- Main Car Body -->
+                            <path class="car-body" d="M 12 30 C 12 24, 18 14, 28 14 L 72 14 C 82 14, 88 20, 88 30 C 88 40, 82 46, 72 46 L 28 46 C 18 46, 12 36, 12 30 Z" fill="#0c0c10" stroke="currentColor" stroke-width="2"/>
+                            <!-- Windshield / Glass -->
+                            <path d="M 28 18 Q 30 30, 28 42 M 28 18 L 36 21 Q 38 30, 36 39 L 28 42" fill="rgba(0, 209, 255, 0.15)" stroke="var(--primary)" stroke-width="1.2" />
+                            <path d="M 68 20 Q 64 30, 68 40 L 74 38 Q 72 30, 74 22 Z" fill="rgba(0, 209, 255, 0.1)" stroke="var(--primary)" stroke-width="1" />
+                            <!-- Headlights -->
+                            <path d="M 12 22 Q 15 22, 16 26" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M 12 38 Q 15 38, 16 34" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
+                            <!-- Left Door Group (swing center: hinge front: x=36, y=14) -->
+                            <g class="door-group left-door-group">
+                                <path class="car-door" d="M 36 14 L 62 14 C 62 14, 62 12, 60 12 L 36 12 Z" fill="currentColor" stroke="currentColor" stroke-width="0.5" />
+                            </g>
+                            <!-- Right Door Group (swing center: hinge front: x=36, y=46) -->
+                            <g class="door-group right-door-group">
+                                <path class="car-door" d="M 36 46 L 62 46 C 62 46, 62 48, 60 48 L 36 48 Z" fill="currentColor" stroke="currentColor" stroke-width="0.5" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="portfolio-section-content" style="display: block;">
+                    <div class="projects-container">
+                        <!-- Project 1: Investigation of Suspension and Steering Performance of the McLaren F1 -->
+                        <div class="project-card reverse">
+                            <div class="project-media glass" style="flex-direction: column; justify-content: flex-start; align-items: stretch; padding: 15px; min-height: 440px;">
+                                <div class="card-tabs" data-target="mclaren-panels">
+                                    <button class="tab-btn active" data-tab="paper">📄 Research Paper</button>
+                                    <button class="tab-btn" data-tab="specs">📊 Technical Specs</button>
+                                    <button class="tab-btn" data-tab="gallery">🖼️ 3D CAD Render</button>
+                                </div>
+                                <div id="mclaren-panels" style="flex: 1; position: relative;">
+                                    <!-- Research Paper Tab -->
+                                    <div class="tab-panel active" data-panel="paper">
+                                        <div class="tab-scroll-panel research-paper">
+                                            <h4>1. Abstract</h4>
+                                            <p>Due to major competition in the automotive industries these days, everyone is looking for the best car to manufacture, sell, and buy. To achieve this task, companies and customers actively seek the full car specifications of their product and competitors for comparison. Many automotive companies only give general specifications like maximum speed, dimensions, and general suspension/steering outlines. As an engineer, we need to investigate the full specifications of a vehicle to a point where we can reverse engineer the car. This paper presents an analytical study of the suspension layout and steering kinematics of the legendary McLaren F1 road car.</p>
+                                            
+                                            <h4>2. Introduction and Vehicle Background</h4>
+                                            <p>The McLaren F1, powered by the BMW S70/2 6.1-litre V12 engine, set a long-standing record of 240.1 mph in 1998, remaining the fastest naturally aspirated production car ever built. Its chassis is a carbon fibre reinforced composite monocoque, setting an early precedent for carbon fibre composites in production vehicles. Its suspension configuration uses double wishbones both front and rear, utilizing a unique Ground Plane Shear Centre subframe mount at the front and an Inclined Axis Shear mounting at the rear, combined with toe control links to manage dynamic deflection steer.</p>
+                                            
+                                            <h4>3. Vehicle Dynamic Load Calculations</h4>
+                                            <p>Calculations were performed to estimate static and dynamic wheel loads under various operating conditions. With a total weight of 1,140 kg (53% rear weight bias) and static roll centers, static axle loads are:</p>
+                                            <ul>
+                                                <li><strong>Static Front Load:</strong> 2,318 N per wheel</li>
+                                                <li><strong>Static Rear Load:</strong> 3,274 N per wheel</li>
+                                            </ul>
+                                            <p>Under a tractive acceleration force of 13,246 N (0.85g), dynamic load transfer reduces front tire loads and increases rear traction:</p>
+                                            <ul>
+                                                <li><strong>Accelerating Front Wheel Load:</strong> 1,808.75 N</li>
+                                                <li><strong>Accelerating Rear Wheel Load:</strong> 3,782.95 N</li>
+                                            </ul>
+                                            <p>Under a maximum braking deceleration of 9.81 m/s² (1.0g), the load transfer shifts to the front wheels:</p>
+                                            <ul>
+                                                <li><strong>Braking Front Wheel Load:</strong> 3,031.30 N</li>
+                                                <li><strong>Braking Rear Wheel Load:</strong> 2,560.40 N</li>
+                                            </ul>
+                                            
+                                            <h4>4. Steering Geometry and Kinematics</h4>
+                                            <p>The McLaren F1 features an unassisted rack-and-pinion steering system. Using turning parameters and track width (Front: 1,568 mm, Rear: 1,472 mm, Wheelbase: 2,718 mm), the steering angles for a 13-meter turning circle diameter (Ds) were calculated:</p>
+                                            <ul>
+                                                <li><strong>Calculated Outer Wheel Angle (&theta;):</strong> 24.78°</li>
+                                                <li><strong>Calculated Inner Wheel Angle (&phi;):</strong> 29.35°</li>
+                                                <li><strong>Ackermann Toe Difference (&phi; - &theta;):</strong> 4.57°</li>
+                                            </ul>
+                                            <p>This positive Ackermann toe difference ensures slip angles are minimized during low-speed cornering, reducing tire scrub and steering effort.</p>
+                                            
+                                            <h4>5. Tyre Scrub Torque</h4>
+                                            <p>Using tire contact patch dimensions (Af = 0.01021 m²) and friction coefficient (&mu; = 0.85), the turning scrub torque (Ms) was evaluated. The scrub moment at the front axles under maximum braking increases to 4,638.58 N-mm, requiring careful suspension bushing stiffness designs to prevent toe deviation.</p>
+                                            
+                                            <h4>6. Conclusion</h4>
+                                            <p>The analytical calculations validate the packaging decisions made by Gordon Murray's design team. The suspension geometry manages dynamic load transfers effectively, maintaining high stability under high braking deceleration (up to 1.0g) and optimizing traction for the rear-driven powertrain.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Specs Tab -->
+                                    <div class="tab-panel" data-panel="specs">
+                                        <div class="tab-scroll-panel specs-table-wrapper">
+                                            <table class="specs-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Specification</th>
+                                                        <th>F1 Road Car</th>
+                                                        <th>F1 GTR Race Car (1997)</th>
+                                                        <th>F1 LM Road Car</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><strong>Production Year</strong></td>
+                                                        <td>1993 - 1998</td>
+                                                        <td>1997</td>
+                                                        <td>1996</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Examples Built</strong></td>
+                                                        <td>64</td>
+                                                        <td>10</td>
+                                                        <td>5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Engine</strong></td>
+                                                        <td>BMW S70/2 6.1L V12 (Naturally Aspirated)</td>
+                                                        <td>BMW S70/2 6.0L V12 (Air-restricted)</td>
+                                                        <td>BMW S70/2 6.1L V12 (Unrestricted)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Cubic Capacity</strong></td>
+                                                        <td>6,064 cc</td>
+                                                        <td>5,990 cc</td>
+                                                        <td>6,064 cc</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Power Output</strong></td>
+                                                        <td>627 bhp @ 7400 rpm</td>
+                                                        <td>600 bhp @ 7500 rpm</td>
+                                                        <td>680 bhp @ 7800 rpm</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Transmission</strong></td>
+                                                        <td>Transverse 6-speed, LSD</td>
+                                                        <td>Magnesium case transverse 6-speed</td>
+                                                        <td>Transverse 6-speed Racing Unit, LSD</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Front Suspension</strong></td>
+                                                        <td colspan="3">Double wishbones, Ground Plane Shear Centre subframe, light alloy damper, coaxial coil spring, anti-roll bar</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Rear Suspension</strong></td>
+                                                        <td colspan="3">Double wishbones, Inclined Axis Shear mounting, light alloy damper, coaxial coil spring, toe control links</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Brakes F/R</strong></td>
+                                                        <td>Outboard 13/12 in ventilated discs</td>
+                                                        <td>Outboard 15/14 in ventilated carbon discs</td>
+                                                        <td>Outboard 13/12 in ventilated discs</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Weight</strong></td>
+                                                        <td>1140 kg (2502 lb)</td>
+                                                        <td>915 kg (2017 lb)</td>
+                                                        <td>1062 kg (2341 lb)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Wheelbase</strong></td>
+                                                        <td>2718 mm</td>
+                                                        <td>2723 mm</td>
+                                                        <td>2718 mm</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><strong>Track F/R</strong></td>
+                                                        <td>1568 / 1472 mm</td>
+                                                        <td>1617 / 1582 mm</td>
+                                                        <td>1570 / 1464 mm</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- 3D Gallery Tab -->
+                                    <div class="tab-panel" data-panel="gallery">
+                                        <div class="pdf-iframe-container">
+                                            <img src="assets/images/mclaren_f1.jpg" alt="McLaren F1 Render" style="width:100%; height:100%; object-fit:contain; background:#050508;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <span class="project-software">SolidWorks // Surface Modeling</span>
+                                <h3 class="project-title">Investigation of Suspension and Steering Performance of the McLaren F1</h3>
+                                <p class="project-desc">Detailed analytical engineering investigation and 3D surface recreation of the McLaren F1. Analyzed tire scrub, Ackermann geometry, suspension subframe kinematics, and steady-state dynamic load transfer under acceleration and braking (up to 1.0g).</p>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-val">100%</span>
+                                        <span class="metric-label">Solid Conversion</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-val">142</span>
+                                        <span class="metric-label">Knit Surfaces</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-val">G2</span>
+                                        <span class="metric-label">Surface Continuity</span>
+                                    </div>
+                                </div>
+                                <div class="project-tags">
+                                    <span>Class-A Surfacing</span>
+                                    <span>Suspension Analysis</span>
+                                    <span>Vehicle Dynamics</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2: Suzuki Samurai Transfer Case -->
+                        <div class="project-card">
+                            <div class="project-media glass">
+                                <div class="project-media-slider" id="slider-suzuki-samurai">
+                                    <div class="slider-slides">
+                                        <div class="media-slide active">
+                                            <img src="assets/images/Suzuki_Samurai_Transfer_Case_Gearset (1).png" alt="Suzuki Samurai Transfer Case Gearset 1">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/Suzuki_Samurai_Transfer_Case_Gearset (2).png" alt="Suzuki Samurai Transfer Case Gearset 2">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/Suzuki_Samurai_Transfer_Case_Gearset (3).png" alt="Suzuki Samurai Transfer Case Gearset 3">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/Suzuki_Samurai_Transfer_Case_Gearset (4).png" alt="Suzuki Samurai Transfer Case Gearset 4">
+                                        </div>
+                                    </div>
+                                    <div class="slider-controls">
+                                        <span class="slider-dot active" data-index="0"></span>
+                                        <span class="slider-dot" data-index="1"></span>
+                                        <span class="slider-dot" data-index="2"></span>
+                                        <span class="slider-dot" data-index="3"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <span class="project-software">SolidWorks // Gear Design & Assembly</span>
+                                <h3 class="project-title">Suzuki Samurai Transfer Case Gear Set Reverse Engineering</h3>
+                                <p class="project-desc">High-fidelity reverse engineering of the Suzuki Samurai 4WD transfer case gear set. Recreated complete gear geometries, shaft splines, and casing interfaces based on physical teardown measurements, optimizing tooth contact and load distribution.</p>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-val">100%</span>
+                                        <span class="metric-label">Dimension Accuracy</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-val">2.278</span>
+                                        <span class="metric-label">Reduction Ratio (Low)</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-val">2.5 mm</span>
+                                        <span class="metric-label">Gear Module</span>
+                                    </div>
+                                </div>
+                                <div class="project-tags">
+                                    <span>Reverse Engineering</span>
+                                    <span>Gear Profile Design</span>
+                                    <span>SolidWorks Assembly</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3: Suzuki Baleno Exhaust Manifold -->
+                        <div class="project-card reverse">
+                            <div class="project-media glass">
+                                <div class="project-media-slider" id="slider-baleno">
+                                    <div class="slider-slides">
+                                        <div class="media-slide active">
+                                            <img src="assets/images/Suzuki_Baleno_Exhaust_Flange.png" alt="Suzuki Baleno Exhaust Flange">
+                                        </div>
+                                        <div class="media-slide">
+                                            <video src="assets/video/Suzuki_Baleno_Exhaust_Flow_Simulation.mp4" autoplay loop muted playsinline></video>
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/Suzuki_Baleno_Exhaust_Flow_Simulation_0.png" alt="Exhaust Flow Simulation 0">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/Suzuki_Baleno_Exhaust_Flow_Simulation_1.png" alt="Exhaust Flow Simulation 1">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/Suzuki_Baleno_Exhaust_Flow_Simulation_2.png" alt="Exhaust Flow Simulation 2">
+                                        </div>
+                                    </div>
+                                    <div class="slider-controls">
+                                        <span class="slider-dot active" data-index="0"></span>
+                                        <span class="slider-dot" data-index="1"></span>
+                                        <span class="slider-dot" data-index="2"></span>
+                                        <span class="slider-dot" data-index="3"></span>
+                                        <span class="slider-dot" data-index="4"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <span class="project-software">SolidWorks // Weldments & Thermal Flow</span>
+                                <h3 class="project-title">Suzuki Baleno Exhaust Manifold Design</h3>
+                                <p class="project-desc">Engineered a high-performance 4-1 exhaust manifold header for the Suzuki Baleno. Designed equal-length primary runners to optimize exhaust gas scavenging and volumetric efficiency, validating clearance constraints within the engine bay packaging envelope.</p>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-val">Equal-Length</span>
+                                        <span class="metric-label">Primary Runners</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-val">SUS304</span>
+                                        <span class="metric-label">Stainless Steel</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-val">4-into-1</span>
+                                        <span class="metric-label">Collector Design</span>
+                                    </div>
+                                </div>
+                                <div class="project-tags">
+                                    <span>Exhaust Header Design</span>
+                                    <span>CFD Flow Analysis</span>
+                                    <span>Weldment Modeling</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4: KTM 390 Fork Extenders -->
+                        <div class="project-card">
+                            <div class="project-media glass">
+                                <div class="project-media-slider" id="slider-ktm">
+                                    <div class="slider-slides">
+                                        <div class="media-slide active">
+                                            <img src="assets/images/KTM_Adventure_Fork_Extender_Multiview.png" alt="KTM Fork Extender Multiview">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/KTM_Adventure_Fork_Extender.png" alt="KTM Fork Extender Detail">
+                                        </div>
+                                    </div>
+                                    <div class="slider-controls">
+                                        <span class="slider-dot active" data-index="0"></span>
+                                        <span class="slider-dot" data-index="1"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <span class="project-software">SolidWorks // Machined Parts & FEA</span>
+                                <h3 class="project-title">KTM 390 Fork Extenders</h3>
+                                <p class="project-desc">Designed custom bolt-on fork extenders for the KTM 390 to raise front-end ground clearance for adventure riding. Performed static FEA structural validation on the threaded joints and load-bearing areas to verify mechanical safety margin under extreme landing impact loads.</p>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-val">Al 6061-T6</span>
+                                        <span class="metric-label">Anodized Aluminum</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-val">1.8x</span>
+                                        <span class="metric-label">Factor of Safety (FEA)</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-val">+35 mm</span>
+                                        <span class="metric-label">Ground Clearance</span>
+                                    </div>
+                                </div>
+                                <div class="project-tags">
+                                    <span>FEA Structural Study</span>
+                                    <span>Machined Thread Design</span>
+                                    <span>Motorcycle Modification</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 5: Tire Table -->
+                        <div class="project-card reverse">
+                            <div class="project-media glass">
+                                <div class="project-media-slider" id="slider-tire-table">
+                                    <div class="slider-slides">
+                                        <div class="media-slide active">
+                                            <img src="assets/images/Tire_Table_0.png" alt="Tire Table Isometric View">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/Tire_Table_1.png" alt="Tire Table Top View">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/Tire_Table_2.png" alt="Tire Table Side View">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/Tire_Table_3.png" alt="Tire Table Bottom Bracket View">
+                                        </div>
+                                    </div>
+                                    <div class="slider-controls">
+                                        <span class="slider-dot active" data-index="0"></span>
+                                        <span class="slider-dot" data-index="1"></span>
+                                        <span class="slider-dot" data-index="2"></span>
+                                        <span class="slider-dot" data-index="3"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <span class="project-software">SolidWorks // Industrial Design & Weldments</span>
+                                <h3 class="project-title">Tire Table Design</h3>
+                                <p class="project-desc">Designed an aesthetic and functional table base utilizing a real automotive performance tire. Engineered a custom steel interlocking support bracket assembly in SolidWorks to secure the tempered glass top while distributing load evenly across the contact points.</p>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-val">Al / Steel</span>
+                                        <span class="metric-label">Bracket Support</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-val">100%</span>
+                                        <span class="metric-label">Custom Weldments</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-val">Tempered</span>
+                                        <span class="metric-label">Glass Interface</span>
+                                    </div>
+                                </div>
+                                <div class="project-tags">
+                                    <span>Industrial Design</span>
+                                    <span>Weldments</span>
+                                    <span>Furniture Engineering</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 6: Tea Machine Pulley -->
+                        <div class="project-card">
+                            <div class="project-media glass">
+                                <div class="pdf-iframe-container">
+                                    <iframe src="assets/Document/Tea_Machine_Pulley.pdf#toolbar=0" title="Tea Machine Pulley Drawing"></iframe>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <span class="project-software">SolidWorks // Technical Drawing</span>
+                                <h3 class="project-title">Tea Machine Pulley Design & Drawing</h3>
+                                <p class="project-desc">Detailed engineering drawing and tolerance study of a drive pulley assembly for an automated industrial tea brewing machine. Implemented precise bore tolerances, keyway fits, and surface finish callouts complying with ISO engineering drafting standards.</p>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-val">ISO/ANSI</span>
+                                        <span class="metric-label">Drafting Standards</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-val">H7/js6</span>
+                                        <span class="metric-label">Bore/Keyway Fits</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-val">GD&T</span>
+                                        <span class="metric-label">Geometric Tolerancing</span>
+                                    </div>
+                                </div>
+                                <div class="project-tags">
+                                    <span>Technical Drafting</span>
+                                    <span>Tolerance Analysis</span>
+                                    <span>Mechanical Design</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Section 2: Product Portfolio -->
+            <div class="portfolio-section expanded" id="sec-product-portfolio">
+                <div class="portfolio-section-header">
+                    <div class="portfolio-header-text">
+                        <span class="section-number">02 //</span>
+                        <h3 class="portfolio-section-title">Product Portfolio</h3>
+                    </div>
+                    <div class="car-toggle-container" title="Click to toggle section">
+                        <svg class="car-toggle-icon" viewBox="0 0 100 60" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="20" y="6" width="12" height="6" rx="2" fill="#555" stroke="none" />
+                            <rect x="68" y="6" width="12" height="6" rx="2" fill="#555" stroke="none" />
+                            <rect x="20" y="48" width="12" height="6" rx="2" fill="#555" stroke="none" />
+                            <rect x="68" y="48" width="12" height="6" rx="2" fill="#555" stroke="none" />
+                            <path d="M 12 30 C 12 24, 18 14, 28 14 L 72 14 C 82 14, 88 20, 88 30 C 88 40, 82 46, 72 46 L 28 46 C 18 46, 12 36, 12 30 Z" fill="rgba(0,0,0,0.4)" stroke="none" transform="translate(0, 3)" />
+                            <path class="car-body" d="M 12 30 C 12 24, 18 14, 28 14 L 72 14 C 82 14, 88 20, 88 30 C 88 40, 82 46, 72 46 L 28 46 C 18 46, 12 36, 12 30 Z" fill="#0c0c10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M 28 18 Q 30 30, 28 42 M 28 18 L 36 21 Q 38 30, 36 39 L 28 42" fill="rgba(0, 209, 255, 0.15)" stroke="var(--primary)" stroke-width="1.2" />
+                            <path d="M 68 20 Q 64 30, 68 40 L 74 38 Q 72 30, 74 22 Z" fill="rgba(0, 209, 255, 0.1)" stroke="var(--primary)" stroke-width="1" />
+                            <path d="M 12 22 Q 15 22, 16 26" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M 12 38 Q 15 38, 16 34" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
+                            <g class="door-group left-door-group">
+                                <path class="car-door" d="M 36 14 L 62 14 C 62 14, 62 12, 60 12 L 36 12 Z" fill="currentColor" stroke="currentColor" stroke-width="0.5" />
+                            </g>
+                            <g class="door-group right-door-group">
+                                <path class="car-door" d="M 36 46 L 62 46 C 62 46, 62 48, 60 48 L 36 48 Z" fill="currentColor" stroke="currentColor" stroke-width="0.5" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="portfolio-section-content" style="display: block;">
+                    <div class="portfolio-grid">
+                        
+                        <!-- CATIA MODELS -->
+                        <div class="portfolio-card-item glass glass-hover">
+                            <div class="portfolio-card-media">
+                                <img src="assets/images/catia_portfolio.png" alt="CATIA V5 Model Portfolio">
+                                <div class="portfolio-media-overlay">
+                                    <a href="https://www.behance.net/gallery/221450163/CATIA-V5-Model-Portfolio" target="_blank" class="btn btn-primary btn-sm">View on Behance</a>
+                                </div>
+                            </div>
+                            <div class="portfolio-card-info">
+                                <span class="card-software">CATIA V5</span>
+                                <h4 class="card-title">CATIA MODELS</h4>
+                                <p class="card-desc">Showcases detailed modeling projects built in CATIA V5, detailing complex part design, surface styling, and structured assembly configurations.</p>
+                                <div class="card-footer">
+                                    <span class="card-tag">BIW / Surfaces</span>
+                                    <span class="card-tag">Assembly Integration</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SOLIDWORKS MODELS -->
+                        <div class="portfolio-card-item glass glass-hover">
+                            <div class="portfolio-card-slider-container">
+                                <div class="project-media-slider" id="slider-solidworks">
+                                    <div class="slider-slides">
+                                        <div class="media-slide active">
+                                            <img src="assets/images/solidworks_differential.png" alt="SOLIDWORKS Modelling Portfolio">
+                                            <div class="sw-slide-label">Modelling Portfolio</div>
+                                            <a href="https://www.behance.net/gallery/221450471/SOLIDWORKS-Modelling-Portfolio" target="_blank" class="sw-slide-link">Behance Portfolio</a>
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/solidworks_differential.png" alt="Differential Model Using SOLIDWORKS">
+                                            <div class="sw-slide-label">Differential Assembly</div>
+                                            <a href="https://www.behance.net/gallery/221280485/Differential-Model-Using-SOLIDWORKS" target="_blank" class="sw-slide-link">Behance Differential</a>
+                                        </div>
+                                        <div class="media-slide">
+                                            <video src="assets/video/differential.mp4" controls muted></video>
+                                            <div class="sw-slide-label">Differential Gear Simulation</div>
+                                        </div>
+                                        <div class="media-slide">
+                                            <video src="assets/video/Disc Brake.mp4" controls muted></video>
+                                            <div class="sw-slide-label">Disc Brake Mechanical Rig</div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-controls">
+                                        <span class="slider-dot active" data-index="0"></span>
+                                        <span class="slider-dot" data-index="1"></span>
+                                        <span class="slider-dot" data-index="2"></span>
+                                        <span class="slider-dot" data-index="3"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-card-info">
+                                <span class="card-software">SolidWorks</span>
+                                <h4 class="card-title">SOLIDWORKS MODELS</h4>
+                                <p class="card-desc">Detailed SolidWorks designs featuring machine layouts, brackets, and a complete functional automotive differential model with correct gear tooth profiles.</p>
+                                <div class="card-footer">
+                                    <span class="card-tag">Differential Assembly</span>
+                                    <span class="card-tag">Part Modelling</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ELECTRIC VEHICLE SUBTOPIC 1: KiCad PCB Design -->
+                        <div class="portfolio-card-item glass glass-hover">
+                            <div class="portfolio-card-slider-container">
+                                <div class="project-media-slider" id="slider-kicad-pcb">
+                                    <div class="slider-slides">
+                                        <div class="media-slide active">
+                                            <img src="assets/images/3d_View_of_PCB_Board_0.png" alt="KiCad PCB 3D View 0">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/3d_View_of_PCB_Board_1.png" alt="KiCad PCB 3D View 1">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/3d_View_of_PCB_Board_2.png" alt="KiCad PCB 3D View 2">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/PCB_Board_Footprint.png" alt="KiCad PCB Layout Footprint">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/PCB_View_of_LED_control_with_Light_deflection_and_Sound_Variation.png" alt="PCB view LED control">
+                                        </div>
+                                        <div class="media-slide">
+                                            <video src="assets/video/Kicad_project_PCB_Board.mp4" controls muted></video>
+                                        </div>
+                                    </div>
+                                    <div class="slider-controls">
+                                        <span class="slider-dot active" data-index="0"></span>
+                                        <span class="slider-dot" data-index="1"></span>
+                                        <span class="slider-dot" data-index="2"></span>
+                                        <span class="slider-dot" data-index="3"></span>
+                                        <span class="slider-dot" data-index="4"></span>
+                                        <span class="slider-dot" data-index="5"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-card-info">
+                                <span class="card-software">KiCad // Hardware Design</span>
+                                <h4 class="card-title">KiCad PCB Design</h4>
+                                <p class="card-desc">Engineered high-current multi-layer PCB layouts in KiCad, featuring custom footprints, track optimization for high power dissipation, and sound-to-light LED variation routing.</p>
+                                <div class="card-footer">
+                                    <span class="card-tag">PCB Layout</span>
+                                    <span class="card-tag">Power Electronics</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ELECTRIC VEHICLE SUBTOPIC 2: MATLAB BLDC Motor Simulation -->
+                        <div class="portfolio-card-item glass glass-hover">
+                            <div class="portfolio-card-slider-container">
+                                <div class="project-media-slider" id="slider-matlab-bldc">
+                                    <div class="slider-slides">
+                                        <div class="media-slide active">
+                                            <img src="assets/images/BLDC_Motor_Matlab_Model.png" alt="Matlab Model Cover">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/PID_Values.png" alt="BLDC PID Tuning Values">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/Rotational_Speed _Scope.png" alt="Rotational Speed Scope">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/Schematics_of_LED_control_with_Light_deflection_and_Sound_Variation.png" alt="LED Control Schematics">
+                                        </div>
+                                        <div class="media-slide">
+                                            <video src="assets/video/BLDC_Motor_Matlab_Creation_Video.mp4" controls muted></video>
+                                        </div>
+                                    </div>
+                                    <div class="slider-controls">
+                                        <span class="slider-dot active" data-index="0"></span>
+                                        <span class="slider-dot" data-index="1"></span>
+                                        <span class="slider-dot" data-index="2"></span>
+                                        <span class="slider-dot" data-index="3"></span>
+                                        <span class="slider-dot" data-index="4"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-card-info">
+                                <span class="card-software">MATLAB & Simulink // System Simulation</span>
+                                <h4 class="card-title">MATLAB BLDC Motor Design</h4>
+                                <p class="card-desc">Modelled EV transient state systems in MATLAB/Simulink. Formulated PID closed-loop tuning blocks for BLDC motor rotational speed scopes, and mapped back-EMF stator responses.</p>
+                                <div class="card-footer">
+                                    <span class="card-tag">BLDC Motor Control</span>
+                                    <span class="card-tag">Simulink Models</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BASIC CAR DESIGN -->
+                        <div class="portfolio-card-item glass glass-hover">
+                            <div class="portfolio-card-slider-container">
+                                <div class="project-media-slider" id="slider-basic-car">
+                                    <div class="slider-slides">
+                                        <div class="media-slide active">
+                                            <img src="assets/images/Basic_Car_perspective_view.png" alt="Basic Car Perspective View">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/Basic_Car_front_view.png" alt="Basic Car Front View">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/Basic_Car_Rear_View.png" alt="Basic Car Rear View">
+                                        </div>
+                                    </div>
+                                    <div class="slider-controls">
+                                        <span class="slider-dot active" data-index="0"></span>
+                                        <span class="slider-dot" data-index="1"></span>
+                                        <span class="slider-dot" data-index="2"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-card-info">
+                                <span class="card-software">SolidWorks // Styling & Surfaces</span>
+                                <h4 class="card-title">Basic Car Design</h4>
+                                <p class="card-desc">Designed a surface-modeled modern passenger sedan concept. Validated curvatures, fender wheel arches, bumper styling lines, and exterior mirror packaging envelopes.</p>
+                                <div class="card-footer">
+                                    <span class="card-tag">Exterior Surfaces</span>
+                                    <span class="card-tag">Proportional Mockup</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TESLA MODEL S -->
+                        <div class="portfolio-card-item glass glass-hover">
+                            <div class="portfolio-card-slider-container">
+                                <div class="project-media-slider" id="slider-tesla-model-s">
+                                    <div class="slider-slides">
+                                        <div class="media-slide active">
+                                            <img src="assets/images/Tesla_Model_S_Multiview.png" alt="Tesla Model S Multiview Drawing">
+                                        </div>
+                                        <div class="media-slide">
+                                            <img src="assets/images/Tesla_Model_S.png" alt="Tesla Model S Surface Render">
+                                        </div>
+                                    </div>
+                                    <div class="slider-controls">
+                                        <span class="slider-dot active" data-index="0"></span>
+                                        <span class="slider-dot" data-index="1"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-card-info">
+                                <span class="card-software">SolidWorks // Surface Reconstruction</span>
+                                <h4 class="card-title">Tesla Model S</h4>
+                                <p class="card-desc">Reverse-engineered the exterior G2 boundary continuity surfaces of the Tesla Model S. Reconstructed hood shapes, doors, and rear pillars from blueprint dimensions.</p>
+                                <div class="card-footer">
+                                    <span class="card-tag">G2 Surface Continuity</span>
+                                    <span class="card-tag">Surfacing Blueprint</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Section 3: Work Experience -->
+            <div class="portfolio-section expanded" id="sec-work-experience">
+                <div class="portfolio-section-header">
+                    <div class="portfolio-header-text">
+                        <span class="section-number">03 //</span>
+                        <h3 class="portfolio-section-title">Work Experience</h3>
+                    </div>
+                    <div class="car-toggle-container" title="Click to toggle section">
+                        <svg class="car-toggle-icon" viewBox="0 0 100 60" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="20" y="6" width="12" height="6" rx="2" fill="#555" stroke="none" />
+                            <rect x="68" y="6" width="12" height="6" rx="2" fill="#555" stroke="none" />
+                            <rect x="20" y="48" width="12" height="6" rx="2" fill="#555" stroke="none" />
+                            <rect x="68" y="48" width="12" height="6" rx="2" fill="#555" stroke="none" />
+                            <path d="M 12 30 C 12 24, 18 14, 28 14 L 72 14 C 82 14, 88 20, 88 30 C 88 40, 82 46, 72 46 L 28 46 C 18 46, 12 36, 12 30 Z" fill="rgba(0,0,0,0.4)" stroke="none" transform="translate(0, 3)" />
+                            <path class="car-body" d="M 12 30 C 12 24, 18 14, 28 14 L 72 14 C 82 14, 88 20, 88 30 C 88 40, 82 46, 72 46 L 28 46 C 18 46, 12 36, 12 30 Z" fill="#0c0c10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M 28 18 Q 30 30, 28 42 M 28 18 L 36 21 Q 38 30, 36 39 L 28 42" fill="rgba(0, 209, 255, 0.15)" stroke="var(--primary)" stroke-width="1.2" />
+                            <path d="M 68 20 Q 64 30, 68 40 L 74 38 Q 72 30, 74 22 Z" fill="rgba(0, 209, 255, 0.1)" stroke="var(--primary)" stroke-width="1" />
+                            <path d="M 12 22 Q 15 22, 16 26" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M 12 38 Q 15 38, 16 34" stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
+                            <g class="door-group left-door-group">
+                                <path class="car-door" d="M 36 14 L 62 14 C 62 14, 62 12, 60 12 L 36 12 Z" fill="currentColor" stroke="currentColor" stroke-width="0.5" />
+                            </g>
+                            <g class="door-group right-door-group">
+                                <path class="car-door" d="M 36 46 L 62 46 C 62 46, 62 48, 60 48 L 36 48 Z" fill="currentColor" stroke="currentColor" stroke-width="0.5" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="portfolio-section-content" style="display: block;">
+                    <div class="work-experience-container">
+                        <div class="work-experience-summary">
+                            <p>As an <strong>Automotive Subject Matter Expert and Project Manager</strong> with over 5 years of industry experience, I lead cross-functional design teams and script complex technical scenarios, while ensuring absolute accuracy in automotive animations and simulations through meticulous quality control. Having successfully delivered <strong>100+ high-fidelity projects</strong>, I combine deep engineering insight with creative production pipelines. Below are redacted samples of technical scripts authored to guide 3D animators and engineering visualizers.</p>
+                        </div>
+                        
+                        <div class="exp-terminal-layout">
+                            <div class="terminal-sidebar">
+                                <h4>Script Registry</h4>
+                                <div class="script-selectors-list" id="script-list-container">
+                                    <button class="script-item-btn active" data-script="0">cat engine.sh</button>
+                                    <button class="script-item-btn" data-script="1">cat ic_engine_parts.sh</button>
+                                    <button class="script-item-btn" data-script="2">cat compressor.sh</button>
+                                    <button class="script-item-btn" data-script="3">cat shock_absorber.sh</button>
+                                    <button class="script-item-btn" data-script="4">cat brake_system.sh</button>
+                                    <button class="script-item-btn" data-script="5">cat disc_brake.sh</button>
+                                    <button class="script-item-btn" data-script="6">cat brake_pad.sh</button>
+                                    <button class="script-item-btn" data-script="7">cat drum_brake.sh</button>
+                                    <button class="script-item-btn" data-script="8">cat electronic_brake.sh</button>
+                                    <button class="script-item-btn" data-script="9">cat brake_master_cyl.sh</button>
+                                    <button class="script-item-btn" data-script="10">cat blower_resistor.sh</button>
+                                    <button class="script-item-btn" data-script="11">cat drive_by_wire.sh</button>
+                                    <button class="script-item-btn" data-script="12">cat spark_plug.sh</button>
+                                    <button class="script-item-btn" data-script="13">cat engine_air_filter.sh</button>
+                                </div>
+                            </div>
+                            <div class="terminal-main">
+                                <div class="term-header">
+                                    <span class="term-dot"></span>
+                                    <span class="term-dot"></span>
+                                    <span class="term-dot"></span>
+                                    <span class="term-title">sys.terminal // secure_viewer</span>
+                                </div>
+                                <div class="terminal-viewer-body" id="terminal-screen">
+                                    <div class="script-meta">> ACCESS CONTROL: AUTHORIZED // TARGET: <strong id="term-script-name">engine.sh</strong></div>
+                                    <p><strong>Script Title:</strong> <span id="term-script-title">Engine Simulation Script</span></p>
+                                    <p><strong>First Line:</strong> <span id="term-script-first-line">So let's start from the basics. Every automotive vehicle needs something to make it move—something that pushes it or pulls it through its surroundings.</span></p>
+                                    <div class="script-meta" style="margin-top: 15px; border-bottom: none;">[CLASSIFIED NDA CONTENT REDACTED]</div>
+                                    <div class="redacted-line">
+                                        <span class="redacted-block" style="width: 80%;"></span><br>
+                                        <span class="redacted-block" style="width: 95%;"></span><br>
+                                        <span class="redacted-block" style="width: 70%;"></span><br>
+                                        <span class="redacted-block" style="width: 85%;"></span><br>
+                                        <span class="redacted-block" style="width: 90%;"></span><br>
+                                        <span class="redacted-block" style="width: 60%;"></span><br>
+                                        <span class="redacted-block" style="width: 75%;"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header">
+            <span class="section-subtitle">05 // COLLABORATION</span>
+            <h2 class="section-title">Get In Touch</h2>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-method">
+                    <h4>Direct Connection</h4>
+                    <a href="mailto:melvinemmanuelt@gmail.com">melvinemmanuelt@gmail.com</a>
+                </div>
+                <div class="contact-method">
+                    <h4>Professional Networks</h4>
+                    <a href="https://www.linkedin.com/in/melvin-emmanuel-theodore/" target="_blank">LinkedIn</a>
+                    <a href="https://www.behance.net/melvintheodor" target="_blank">Behance</a>
+                    <a href="https://github.com/MelvinEmmanuelTheodore" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <form class="contact-form glass" id="contact-form-el">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="message">Message</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Melvin Emmanuel Theodore. All Rights Reserved.</p>
+        <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/melvin-emmanuel-theodore/" target="_blank">LinkedIn</a>
+            <a href="https://www.behance.net/melvintheodor" target="_blank">Behance</a>
+            <a href="https://github.com/MelvinEmmanuelTheodore" target="_blank">GitHub</a>
+        </div>
+    </footer>
+
+    <!-- Three.js Library via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="three-bg.js"></script>
+
+    <!-- GSAP & ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
