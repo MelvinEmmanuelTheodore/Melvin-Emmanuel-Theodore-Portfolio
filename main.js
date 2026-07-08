@@ -134,6 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 end: 'bottom bottom',
                 scrub: true,
                 onUpdate: (self) => {
+                    if (window.isDraggingScrollbar) return; // Prevent jumping/glitching during dragging
                     const progress = self.progress;
                     const containerHeight = window.innerHeight - 160; // Padding offset
                     
@@ -561,13 +562,194 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Contact Form Submission (Prevent Default & Show Alert)
+    // Contact Form Submission with Web3Forms AJAX post
     const contactForm = document.getElementById('contact-form-el');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Thank you for reaching out, Melvin! Your message has been sent (simulation).');
-            contactForm.reset();
+            
+            // Web3Forms Access Key
+            const accessKey = "e43907d0-0e4a-4c69-b383-2b765942fffe"; 
+            
+            if (accessKey === "YOUR_ACCESS_KEY_HERE" || !accessKey) {
+                alert("Contact form is currently in simulation mode.\n\nTo activate real email delivery:\n1. Get a free Access Key at https://web3forms.com/\n2. Edit main.js and paste your key in place of 'YOUR_ACCESS_KEY_HERE'.");
+                contactForm.reset();
+                return;
+            }
+            
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = "Sending...";
+            submitBtn.disabled = true;
+            
+            const formData = new FormData(contactForm);
+            formData.append("access_key", accessKey);
+            
+            const subjectVal = formData.get("subject") || "New Portfolio Message";
+            formData.set("subject", `[Portfolio Contact] ${subjectVal}`);
+            
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let resJson = await response.json();
+                if (response.status === 200) {
+                    alert('Thank you! Your message has been sent successfully to Melvin.');
+                    contactForm.reset();
+                } else {
+                    alert('Error sending message: ' + resJson.message);
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                alert('Something went wrong. Please check your internet connection.');
+            })
+            .finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+    }
+
+    // Draggable and Clickable Scroll Tracker (scrollbar navigation)
+    const scrollPathContainer = document.querySelector('.scroll-path-container');
+    const scrollCar = document.getElementById('scroll-car');
+    if (scrollPathContainer && scrollCar) {
+        window.isDraggingScrollbar = false;
+        
+        function handleScrollAction(clientY) {
+            const rect = scrollPathContainer.getBoundingClientRect();
+            const paddingTop = 80;
+            const paddingBottom = 80;
+            const pathHeight = rect.height - paddingTop - paddingBottom;
+            
+            // Calculate Y relative to the start of the scroll track
+            let localY = clientY - rect.top - paddingTop;
+            localY = Math.max(0, Math.min(localY, pathHeight));
+            
+            const pct = localY / pathHeight;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            
+            // Update the scroll position instantly
+            window.scrollTo(0, pct * scrollHeight);
+            
+            // Manually set positions during drag to bypass scroll lag and prevent jitter/snapping
+            gsap.set(scrollCar, { y: localY });
+            scrollProgLine.style.height = `${pct * 100}%`;
+        }
+        
+        scrollPathContainer.addEventListener('mousedown', (e) => {
+            window.isDraggingScrollbar = true;
+            handleScrollAction(e.clientY);
+            e.preventDefault();
+        });
+        
+        window.addEventListener('mousemove', (e) => {
+            if (window.isDraggingScrollbar) {
+                handleScrollAction(e.clientY);
+            }
+        });
+        
+        window.addEventListener('mouseup', () => {
+            window.isDraggingScrollbar = false;
+        });
+        
+        // Touch events for mobile support
+        scrollPathContainer.addEventListener('touchstart', (e) => {
+            window.isDraggingScrollbar = true;
+            if (e.touches && e.touches[0]) {
+                handleScrollAction(e.touches[0].clientY);
+            }
+        }, { passive: true });
+        
+        window.addEventListener('touchmove', (e) => {
+            if (window.isDraggingScrollbar && e.touches && e.touches[0]) {
+                handleScrollAction(e.touches[0].clientY);
+            }
+        }, { passive: true });
+        
+        window.addEventListener('touchend', () => {
+            window.isDraggingScrollbar = false;
+        });
+    }
+
+    // Lightbox Modal Zoom for Images and Videos
+    const lightbox = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxVideo = document.getElementById('lightbox-video');
+    const lightboxClose = document.querySelector('.lightbox-close');
+
+    if (lightbox) {
+        // Collect all interactive/expandable items inside portfolio components
+        const selectZoomable = () => {
+            return document.querySelectorAll('.media-slide img, .media-slide video, .grid-card img, .grid-card video, .case-study-media img, .case-study-media video, .tab-pane img, .tab-pane video');
+        };
+
+        const setupLightboxTriggers = () => {
+            const zoomable = selectZoomable();
+            zoomable.forEach(elem => {
+                // Remove existing click to avoid duplicate registration if called repeatedly
+                elem.removeEventListener('click', openLightboxEvent);
+                elem.addEventListener('click', openLightboxEvent);
+            });
+        };
+
+        function openLightboxEvent(e) {
+            e.stopPropagation();
+            const elem = e.currentTarget;
+            const tagName = elem.tagName.toLowerCase();
+
+            if (tagName === 'img') {
+                lightboxImg.src = elem.src;
+                lightboxImg.style.display = 'block';
+                lightboxVideo.style.display = 'none';
+                lightboxVideo.src = '';
+            } else if (tagName === 'video') {
+                lightboxVideo.src = elem.src || elem.currentSrc;
+                lightboxVideo.style.display = 'block';
+                lightboxImg.style.display = 'none';
+                lightboxImg.src = '';
+                lightboxVideo.load();
+                lightboxVideo.play().catch(err => console.log('Autoplay blocked:', err));
+            }
+
+            lightbox.classList.add('show');
+            document.body.style.overflow = 'hidden'; // Lock page scroll
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('show');
+            document.body.style.overflow = ''; // Unlock page scroll
+            lightboxVideo.pause();
+            lightboxVideo.src = '';
+            lightboxImg.src = '';
+        }
+
+        if (lightboxClose) {
+            lightboxClose.addEventListener('click', closeLightbox);
+        }
+
+        lightbox.addEventListener('click', (e) => {
+            // Close if clicking the background mask itself
+            if (e.target === lightbox || e.target.classList.contains('lightbox-content-wrapper')) {
+                closeLightbox();
+            }
+        });
+
+        // Initialize setup on page load
+        setupLightboxTriggers();
+
+        // Re-run setup whenever tabs, accordions or sliders render new content dynamically
+        document.addEventListener('click', () => {
+            setTimeout(setupLightboxTriggers, 100);
         });
     }
 
