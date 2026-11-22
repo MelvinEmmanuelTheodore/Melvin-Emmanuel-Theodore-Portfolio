@@ -94,7 +94,7 @@ function createProceduralCar() {
     const carColor = new THREE.Color(0x00D1FF); // Electric Cyan
     const positions = [];
     const colors = [];
-    const originalPositions = []; // Store for deformation/crash simulations
+    const originalPositions = []; // Store for mesh deformation dynamics
 
     // Helper: Add points along a 3D curve
     function addCurvePoints(pointsArray, density = 60) {
